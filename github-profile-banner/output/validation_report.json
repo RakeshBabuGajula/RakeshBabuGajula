@@ -1,0 +1,84 @@
+{
+  "total_checks": 14,
+  "passed": 14,
+  "failed": 0,
+  "metrics": {
+    "intro_spatial_imbalance": 0.002900252126841832,
+    "grid_alignment_score": 0.0,
+    "mean_travel_pd": 20.778918252179807,
+    "mean_travel_dg": 16.89854972037899,
+    "mean_travel_gp": 15.59214382660815
+  },
+  "results": [
+    {
+      "name": "XML Parsing (dark.svg)",
+      "passed": true,
+      "details": "Well-formed XML tree"
+    },
+    {
+      "name": "ViewBox (dark.svg)",
+      "passed": true,
+      "details": "viewBox='0 0 1180 610' (expected '0 0 1180 610')"
+    },
+    {
+      "name": "System Info Rows (dark.svg)",
+      "passed": true,
+      "details": "All 15 rows present with exact values"
+    },
+    {
+      "name": "Profile Links (dark.svg)",
+      "passed": true,
+      "details": "GitHub, LinkedIn, Portfolio, and Email valid"
+    },
+    {
+      "name": "Real SVG Renderer PNG (dark)",
+      "passed": true,
+      "details": "Rendered size: (1180, 610), bytes: 96,700 (resvg-py engine)"
+    },
+    {
+      "name": "XML Parsing (light.svg)",
+      "passed": true,
+      "details": "Well-formed XML tree"
+    },
+    {
+      "name": "ViewBox (light.svg)",
+      "passed": true,
+      "details": "viewBox='0 0 1180 610' (expected '0 0 1180 610')"
+    },
+    {
+      "name": "System Info Rows (light.svg)",
+      "passed": true,
+      "details": "All 15 rows present with exact values"
+    },
+    {
+      "name": "Profile Links (light.svg)",
+      "passed": true,
+      "details": "GitHub, LinkedIn, Portfolio, and Email valid"
+    },
+    {
+      "name": "Real SVG Renderer PNG (light)",
+      "passed": true,
+      "details": "Rendered size: (1180, 610), bytes: 100,817 (resvg-py engine)"
+    },
+    {
+      "name": "Animation A: Intro Spatial Imbalance",
+      "passed": true,
+      "details": "Normalized imbalance = 0.0029 (target <= 0.05)"
+    },
+    {
+      "name": "Animation B: Grid Alignment / Straight Boundary Score",
+      "passed": true,
+      "details": "Score = 0.00000 (target <= 0.01, alert at 0.17)"
+    },
+    {
+      "name": "Animation B: Morph Particle Count",
+      "passed": true,
+      "details": "Count = 900 (expected 900)"
+    },
+    {
+      "name": "Animation B: Optimal Transport Short Paths",
+      "passed": true,
+      "details": "Mean travel: Python->Docker 20.8px, Docker->Git 16.9px, Git->Python 15.6px (<30px organic threshold)"
+    }
+  ]
+}
