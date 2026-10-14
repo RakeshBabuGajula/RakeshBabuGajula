@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/RakeshBabuGajula">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&multiline=false&width=750&height=45&lines=Aspiring+Software+Engineer+%7C+AI%2FML+%26+Agentic+Systems+Engineer;Building+Autonomous+Multi-Agent+Workflows+%26+Production+RAG;Guinness+World+Record+Participant+%40+GDG+Agentathon+2025;Patent+Inventor+%7C+Full-Stack+Architect+%7C+15%2B+Shipped+Projects" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&multiline=false&width=750&height=45&lines=Software+Engineer+%7C+AI%2FML+%26+Agentic+Systems+Engineer;Building+Autonomous+Multi-Agent+Workflows+%26+Production+RAG;Full-Stack+Architect+%7C+15%2B+Shipped+Projects;Selected+%40+IIT+Patna+Vishlesan+i-Hub+%7C+Amazon+ML+Top+23%25" alt="Typing SVG" />
   </a>
 </p>
 
@@ -18,7 +18,6 @@
   <img src="https://img.shields.io/badge/Status-🟢%20Open%20to%20SWE%20%7C%20AI%2FML%20Roles-success?style=for-the-badge&logoColor=white" alt="Status"/>
   <img src="https://img.shields.io/badge/Location-📍%20Hyderabad%2C%20India-blue?style=for-the-badge&logoColor=white" alt="Location"/>
   <img src="https://img.shields.io/badge/Education-🎓%20B.Tech%20CSE%20(2023--2027)-purple?style=for-the-badge&logoColor=white" alt="Education"/>
-  <img src="https://komarev.com/ghpvc/?username=RakeshBabuGajula&label=Profile%20Views&color=22d3ee&style=for-the-badge" alt="Profile Views"/>
 </p>
 
 <p align="center">
@@ -36,12 +35,12 @@
 
 ### 👨‍💻 Executive Summary
 
-I am a **Software Engineer and AI/ML Engineer** pursuing a **B.Tech in Computer Science and Engineering at Guru Nanak Institutions Technical Campus (GNITC, 2023–2027)**, passionate about building **scalable software platforms**, **intelligent AI applications**, **autonomous multi-agent systems**.
+I am a **Software Engineer and AI/ML Engineer** pursuing a **B.Tech in Computer Science and Engineering at Guru Nanak Institutions Technical Campus (GNITC, 2023–2027)**, passionate about building **scalable software platforms**, **intelligent AI applications**, and **autonomous multi-agent systems**.
 
-- 🏆 **Guinness World Record Participant**: Selected participant at **GDG Agentathon 2025**, the world's largest Agentic AI hackathon.
 - 🎓 **Selected for Premier Cohorts**: Trainee at **IIT Patna Vishlesan i-Hub** (Machine Learning & Agentic Systems) and shortlisted for **Amazon ML Summer School 2026** (Top 23% nationwide from 134,421+ applicants).
 - 🚀 **15+ Production & Open-Source Projects**: Spanning Agentic AI (LangGraph, ChromaDB, Gemini, OpenAI), Computer Vision (YOLOv8, OpenCV), and Full-Stack Systems (React, Next.js, Node.js, FastAPI, PostgreSQL, MongoDB).
 - 💼 **Professional Internship Experience**: Proven industry delivery at **IBM SkillsBuild** (Deep Learning NLP) and **Viswam.AI / Swecha** (Multilingual Speech AI & LLM integration).
+- 💡 **Engineering Philosophy**: Delivering scalable, resilient full-stack architectures and low-latency AI pipelines designed for real-world production.
 
 <br/>
 
@@ -168,7 +167,6 @@ Every project below is developed, tested, and available publicly across my GitHu
 - **Tech Stack**: `Python`, `OpenCV`, `Streamlit`, `Google Gemini API`, `OpenAI`, `SpeechRecognition`, `Plotly`, `Multi-Agent Architecture`.
 
 #### 🔹 [Autonomous ECOS Engine – Enterprise Compliance & Operational Synchronization](https://github.com/RakeshBabuGajula)
-🏆 *Built during the Guinness World Record Event at GDG Agentathon 2025*
 - **The Problem**: Enterprise compliance teams struggle with manual review of thousands of daily multi-source logs, exposing sensitive data to privacy breaches.
 - **The Architecture**: An autonomous agentic workflow leveraging **Google Gemini** reasoning combined with **n8n** webhook orchestration to monitor, classify, and redact unstructured data streams in real time.
 - **Key Innovations**:
@@ -339,9 +337,8 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 ---
 
-## 🏅 Honors, Patents & Key Milestones
+## 🏅 Honors, Awards & Key Milestones
 
-- 🏆 **Guinness World Record Participant – GDG Agentathon 2025**: Selected participant in the world’s largest Agentic AI hackathon.
 - 🌟 **Shortlisted for Amazon ML Summer School 2026**: Shortlisted among **31,821 candidates from 134,421+ applicants** nationwide (Top 23%).
 - 🎓 **Selected for IIT Patna Vishlesan I-Hub**: Premier advanced cohort in Machine Learning, RAG, and Multi-Agent Systems.
 - 🚀 **Campus Ambassador – E-Cell, IIT Bombay**: Represented Asia's premier entrepreneurship body on campus, organizing hackathons and startup awareness drives.

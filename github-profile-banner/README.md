@@ -2,7 +2,7 @@
 
 A production-grade, developer-terminal animated SVG profile banner custom-engineered for **Rakesh Babu Gajula** ([@RakeshBabuGajula](https://github.com/RakeshBabuGajula)), Aspiring Software Engineer & AI/ML Engineer.
 
-Built with high-precision 1-bit Floyd–Steinberg dithering, color-segmented background isolation, native SMIL keyframe animations, 60-group interleaved progressive intro reveal, and 900-particle Optimal Transport vector logo morphing across **Python**, **Docker**, and **Git**.
+Built with high-precision 1-bit Floyd–Steinberg dithering with enhanced facial and eye definition, color-segmented background isolation, permanent portrait fidelity, and continuous biometric laser scanline motion display.
 
 ---
 

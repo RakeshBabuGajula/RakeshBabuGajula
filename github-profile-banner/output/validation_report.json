@@ -3,7 +3,7 @@
   "passed": 14,
   "failed": 0,
   "metrics": {
-    "intro_spatial_imbalance": 0.002900252126841832,
+    "intro_spatial_imbalance": 0.002681035523195714,
     "grid_alignment_score": 0.0,
     "mean_travel_pd": 20.778918252179807,
     "mean_travel_dg": 16.89854972037899,
@@ -33,7 +33,7 @@
     {
       "name": "Real SVG Renderer PNG (dark)",
       "passed": true,
-      "details": "Rendered size: (1180, 610), bytes: 96,700 (resvg-py engine)"
+      "details": "Rendered size: (1180, 610), bytes: 96,232 (resvg-py engine)"
     },
     {
       "name": "XML Parsing (light.svg)",
@@ -58,12 +58,12 @@
     {
       "name": "Real SVG Renderer PNG (light)",
       "passed": true,
-      "details": "Rendered size: (1180, 610), bytes: 100,817 (resvg-py engine)"
+      "details": "Rendered size: (1180, 610), bytes: 102,890 (resvg-py engine)"
     },
     {
       "name": "Animation A: Intro Spatial Imbalance",
       "passed": true,
-      "details": "Normalized imbalance = 0.0029 (target <= 0.05)"
+      "details": "Normalized imbalance = 0.0027 (target <= 0.05)"
     },
     {
       "name": "Animation B: Grid Alignment / Straight Boundary Score",

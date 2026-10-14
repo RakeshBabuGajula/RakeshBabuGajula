@@ -17,6 +17,7 @@ Validates:
 """
 
 import io
+import io
 import json
 import re
 import sys
@@ -33,16 +34,16 @@ LOGOS_DIR = BASE_DIR / "logos"
 
 EXPECTED_ROWS = [
     ("Subject", "Rakesh Babu Gajula"),
-    ("Role", "AI/ML Engineer"),
+    ("Role", "Software Engineer"),
     ("Origin", "Hyderabad, India"),
     ("Education", "B.Tech CSE / GNITC"),
-    ("Status", "Building + Shipping"),
-    ("ToolChain", "VS Code / Git / Docker"),
+    ("Core.AI/ML", "PyTorch / RAG / Agents"),
+    ("Core.Vision", "YOLOv8 / OpenCV / CV"),
     ("Core.Lang", "Python / SQL / JS"),
-    ("Core.Frontend", "HTML / CSS / JS"),
-    ("Core.Backend", "FastAPI / Flask / Node"),
+    ("Core.Frontend", "React / Next.js / Tailwind"),
+    ("Core.Backend", "FastAPI / Node / Express"),
     ("Core.Database", "PostgreSQL / MongoDB"),
-    ("Core.Infra", "Docker / GitHub"),
+    ("Core.Infra", "Docker / GitHub Actions"),
     ("Grid.Mail", "grakesh2605@gmail.com"),
     ("Grid.Portfolio", "my_portfolio"),
     ("Grid.LinkedIn", "rakesh-babu-gajula"),

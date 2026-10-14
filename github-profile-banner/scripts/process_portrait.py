@@ -164,15 +164,15 @@ def process_portrait():
     crop = orig.crop(CROP_BOX).resize((GRID_W, GRID_H), Image.Resampling.LANCZOS)
     print(f"Cropped & resized working grid: {crop.size}")
 
-    # 2. Contrast enhancement (~1.3x)
+    # 2. Contrast enhancement (~1.25x)
     enhancer = ImageEnhance.Contrast(crop)
-    crop_enh = enhancer.enhance(1.3)
+    crop_enh = enhancer.enhance(1.25)
 
-    # 3. ImageOps.autocontrast with cutoff 1%
-    crop_ac = ImageOps.autocontrast(crop_enh, cutoff=1)
+    # 3. ImageOps.autocontrast with gentle cutoff 0.5%
+    crop_ac = ImageOps.autocontrast(crop_enh, cutoff=0.5)
 
-    # 4. UnsharpMask(radius=3, percent=140)
-    crop_sharp = crop_ac.filter(ImageFilter.UnsharpMask(radius=3, percent=140))
+    # 4. UnsharpMask with radius=2, percent=160, threshold=2 to highlight pupils, sclera, and eyelid lines
+    crop_sharp = crop_ac.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=2))
 
     # Convert to grayscale
     gray = crop_sharp.convert("L")

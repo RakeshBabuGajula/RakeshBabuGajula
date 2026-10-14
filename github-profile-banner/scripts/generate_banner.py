@@ -39,19 +39,19 @@ TERM_W = 1140
 TERM_H = 570
 SPLIT_X = 455
 
-# 15 Information Rows in strict order
+# 15 Information Rows in strict order (Status & ToolChain removed, AI/ML & Vision added)
 ROWS = [
     ("Subject", "Rakesh Babu Gajula", None),
-    ("Role", "AI/ML Engineer", None),
+    ("Role", "Software Engineer", None),
     ("Origin", "Hyderabad, India", None),
     ("Education", "B.Tech CSE / GNITC", None),
-    ("Status", "Building + Shipping", None),
-    ("ToolChain", "VS Code / Git / Docker", None),
+    ("Core.AI/ML", "PyTorch / RAG / Agents", None),
+    ("Core.Vision", "YOLOv8 / OpenCV / CV", None),
     ("Core.Lang", "Python / SQL / JS", None),
-    ("Core.Frontend", "HTML / CSS / JS", None),
-    ("Core.Backend", "FastAPI / Flask / Node", None),
+    ("Core.Frontend", "React / Next.js / Tailwind", None),
+    ("Core.Backend", "FastAPI / Node / Express", None),
     ("Core.Database", "PostgreSQL / MongoDB", None),
-    ("Core.Infra", "Docker / GitHub", None),
+    ("Core.Infra", "Docker / GitHub Actions", None),
     ("Grid.Mail", "grakesh2605@gmail.com", "mailto:grakesh2605@gmail.com"),
     ("Grid.Portfolio", "my_portfolio", "https://rakeshbabugajula.github.io/my_portfolio/"),
     ("Grid.LinkedIn", "rakesh-babu-gajula", "https://www.linkedin.com/in/rakesh-babu-gajula/"),
@@ -268,100 +268,47 @@ def generate_svg_banner(theme="dark"):
 
     dots_list = portrait_data["dark_mode"]["coords"] if is_dark else portrait_data["light_mode"]["coords"]
 
-    # 1. Build 60 intro groups (Animation A: 3.2s progressive intro)
-    print(f"[{theme.upper()}] Building 60 intro reveal groups...")
-    intro_groups = build_intro_groups(dots_list, num_groups=60)
+    # 1. Load optimized static portrait path
+    static_svg_file = (ASSETS_DIR / f"portrait-dithered-{theme}.svg").read_text(encoding="utf-8")
+    import re
+    match = re.search(r'<path d="([^"]+)"', static_svg_file)
+    full_path_d = match.group(1) if match else ""
 
-    # 2. Build 94 drift bands (Animation B Layer 1)
-    print(f"[{theme.upper()}] Building 94 drift bands (sigma=4 noise)...")
-    drift_bands = build_drift_bands(dots_list, num_bands=94, target_dots=17000)
-
-    # 3. Assemble SVG markup
-    # Timing calculations for 14.2s morph loop:
-    # k0=0.0 (0s), k1=0.2113 (3.0s), k2=0.3028 (4.3s), k3=0.4437 (6.3s),
-    # k4=0.5352 (7.6s), k5=0.6761 (9.6s), k6=0.7676 (10.9s), k7=0.9085 (12.9s), k8=1.0 (14.2s)
-    key_times = "0; 0.2113; 0.3028; 0.4437; 0.5352; 0.6761; 0.7676; 0.9085; 1"
-
-    # SVG Elements:
-    # A. Intro reveal layer (fades groups in over 3.2s, then fades out at 3.0s to hand off to looping layer)
-    intro_layer_parts = []
-    for g_id, path_d in enumerate(intro_groups):
-        t_begin = round((g_id / 60.0) * 3.0, 3)
-        t_dur = 0.35
-        intro_layer_parts.append(
-            f'<path d="{path_d}" fill="{portrait_color}" shape-rendering="crispEdges" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" begin="{t_begin}s" dur="{t_dur}s" fill="freeze"/>'
-            f'</path>'
-        )
-    intro_paths_joined = "\n          ".join(intro_layer_parts)
-
-    intro_layer_svg = f"""      <!-- LAYER 0: Intro Reveal (Plays once over 3.2s across 60 interleaved groups) -->
-      <g id="intro-layer" opacity="1">
-        <animate attributeName="opacity" values="1; 1; 0" keyTimes="0; 0.2113; 0.3028" begin="0s" dur="14.2s" fill="freeze"/>
-        <g transform="translate({PORTRAIT_X}, {PORTRAIT_Y})">
-          {intro_paths_joined}
-        </g>
+    portrait_layer_svg = f"""      <!-- LAYER: Permanent High-Fidelity Dithered Portrait -->
+      <g id="portrait-layer" transform="translate({PORTRAIT_X}, {PORTRAIT_Y})">
+        <path d="{full_path_d}" fill="{portrait_color}" shape-rendering="crispEdges"/>
       </g>"""
 
-    # B. Looping Layer 1: Portrait Drift (94 bands translating by 42% toward logo centroid)
-    drift_band_parts = []
-    for b in drift_bands:
-        dx, dy = b["dx"], b["dy"]
-        drift_band_parts.append(
-            f'<g class="drift-band" opacity="1">'
-            f'<animateTransform attributeName="transform" type="translate" dur="14.2s" repeatCount="indefinite" '
-            f'keyTimes="0; 0.2113; 0.3028; 0.9085; 1" values="0,0; 0,0; {dx},{dy}; {dx},{dy}; 0,0"/>'
-            f'<animate attributeName="opacity" dur="14.2s" repeatCount="indefinite" '
-            f'keyTimes="0; 0.2113; 0.3028; 0.9085; 1" values="1; 1; 0; 0; 1"/>'
-            f'<path d="{b["d"]}" fill="{portrait_color}" shape-rendering="crispEdges"/>'
-            f'</g>'
-        )
-    drift_bands_joined = "\n          ".join(drift_band_parts)
-
-    looping_drift_svg = f"""      <!-- LAYER 1: Portrait Drift (14.2s repeat, 94 bands, 42% centroid translate) -->
-      <g id="portrait-drift-layer" transform="translate({PORTRAIT_X}, {PORTRAIT_Y})">
-        {drift_bands_joined}
+    # B. Motion Display: Laser Scanline, Biometric Wave, and HUD Reticles
+    motion_display_svg = f"""      <!-- MOTION DISPLAY: Biometric Neural Scan & Active Telemetry -->
+      <g id="laser-scan" clip-path="url(#portrait-clip)">
+        <!-- Glowing Laser Beam -->
+        <line x1="{PORTRAIT_X}" y1="{PORTRAIT_Y}" x2="{PORTRAIT_X + GRID_W}" y2="{PORTRAIT_Y}" stroke="{accent_cyan}" stroke-width="2" opacity="0.85">
+          <animate attributeName="y1" values="{PORTRAIT_Y}; {PORTRAIT_Y + GRID_H}; {PORTRAIT_Y}" dur="3.6s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="{PORTRAIT_Y}; {PORTRAIT_Y + GRID_H}; {PORTRAIT_Y}" dur="3.6s" repeatCount="indefinite"/>
+        </line>
+        <!-- Trailing illuminated sweep -->
+        <rect x="{PORTRAIT_X}" y="{PORTRAIT_Y}" width="{GRID_W}" height="32" fill="url(#scan-glow-grad)" opacity="0.35">
+          <animate attributeName="y" values="{PORTRAIT_Y - 32}; {PORTRAIT_Y + GRID_H}; {PORTRAIT_Y - 32}" dur="3.6s" repeatCount="indefinite"/>
+        </rect>
+        <!-- Subtle Horizontal Telemetry Lines -->
+        <line x1="{PORTRAIT_X}" y1="{PORTRAIT_Y + 115}" x2="{PORTRAIT_X + GRID_W}" y2="{PORTRAIT_Y + 115}" stroke="{accent_cyan}" stroke-width="0.6" stroke-dasharray="4,6" opacity="0.35">
+          <animate attributeName="opacity" values="0.15; 0.5; 0.15" dur="2.4s" repeatCount="indefinite"/>
+        </line>
+        <line x1="{PORTRAIT_X}" y1="{PORTRAIT_Y + 225}" x2="{PORTRAIT_X + GRID_W}" y2="{PORTRAIT_Y + 225}" stroke="{accent_cyan}" stroke-width="0.6" stroke-dasharray="4,6" opacity="0.35">
+          <animate attributeName="opacity" values="0.5; 0.15; 0.5" dur="2.4s" repeatCount="indefinite"/>
+        </line>
       </g>"""
 
-    # C. Looping Layer 2: 900 Travelling Morph Particles
-    # Particle color: vibrant cyan accent for visibility and wow factor
-    particle_color = accent_cyan
-    particle_elements = []
-    for p in trajectories:
-        init_x, init_y = p["p_init"]
-        py_x, py_y = p["p_python"]
-        dk_x, dk_y = p["p_docker"]
-        gt_x, gt_y = p["p_git"]
-
-        # Trajectory values:
-        # k0: init, k1: init, k2: python, k3: python, k4: docker, k5: docker, k6: git, k7: git, k8: init
-        val_x = f"{init_x}; {init_x}; {py_x}; {py_x}; {dk_x}; {dk_x}; {gt_x}; {gt_x}; {init_x}"
-        val_y = f"{init_y}; {init_y}; {py_y}; {py_y}; {dk_y}; {dk_y}; {gt_y}; {gt_y}; {init_y}"
-
-        particle_elements.append(
-            f'<circle cx="{init_x}" cy="{init_y}" r="1.5" fill="{particle_color}">'
-            f'<animate attributeName="cx" dur="14.2s" repeatCount="indefinite" keyTimes="{key_times}" values="{val_x}"/>'
-            f'<animate attributeName="cy" dur="14.2s" repeatCount="indefinite" keyTimes="{key_times}" values="{val_y}"/>'
-            f'</circle>'
-        )
-    particles_joined = "\n          ".join(particle_elements)
-
-    # Master opacity for travelling particles:
-    # 0 during portrait (0s-3.0s), fades to 1 during transition (3.0-4.3s), stays 1, fades to 0 at return (12.9-14.2s)
-    morph_layer_svg = f"""      <!-- LAYER 2: Travelling Morph Particles (900 particles, Optimal Transport) -->
-      <g id="morph-particles-layer" transform="translate({PORTRAIT_X}, {PORTRAIT_Y})" opacity="0">
-        <animate attributeName="opacity" dur="14.2s" repeatCount="indefinite"
-                 keyTimes="{key_times}"
-                 values="0; 0; 1; 1; 1; 1; 1; 1; 0"/>
-        {particles_joined}
-      </g>"""
-
-    # D. Active Phase Label (below portrait frame)
+    # C. Active Phase Label (below portrait frame)
     phase_label_svg = f"""      <!-- HUD Phase Indicator -->
       <g transform="translate({PORTRAIT_X + 150}, 498)">
-        <rect x="-115" y="-16" width="230" height="23" rx="4" fill="{accent_cyan}12" stroke="{accent_secondary}" stroke-width="0.8" opacity="0.6"/>
-        <text text-anchor="middle" y="0" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="{accent_cyan}" letter-spacing="1.5">
-          VISUAL.MAP // PROFILE ACTIVE
+        <rect x="-120" y="-16" width="240" height="23" rx="4" fill="{accent_cyan}12" stroke="{accent_secondary}" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="-100" cy="-4" r="3.5" fill="{accent_cyan}">
+          <animate attributeName="opacity" values="1; 0.3; 1" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text text-anchor="middle" x="8" y="0" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="{accent_cyan}" letter-spacing="1.5">
+          VISUAL.MAP // SYNAPSE ACTIVE
         </text>
       </g>"""
 
@@ -393,6 +340,12 @@ def generate_svg_banner(theme="dark"):
     <clipPath id="portrait-clip">
       <rect x="{PORTRAIT_X}" y="{PORTRAIT_Y}" width="{GRID_W}" height="{GRID_H}" rx="4"/>
     </clipPath>
+    <!-- Biometric Laser Scanline Gradient -->
+    <linearGradient id="scan-glow-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="{accent_cyan}" stop-opacity="0"/>
+      <stop offset="50%" stop-color="{accent_cyan}" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="{accent_cyan}" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <!-- Banner Outer Canvas -->
@@ -457,23 +410,24 @@ def generate_svg_banner(theme="dark"):
       <!-- Frame Box -->
       <rect x="{PORTRAIT_X - 10}" y="{PORTRAIT_Y - 10}" width="{GRID_W + 20}" height="{GRID_H + 20}" rx="6" fill="{frame_bg}" stroke="{term_border}" stroke-width="1"/>
 
-      <!-- Corner Crosshair Ticks -->
-      <path d="M{PORTRAIT_X - 14},{PORTRAIT_Y - 4}v-10h10 M{PORTRAIT_X + GRID_W + 14},{PORTRAIT_Y - 4}v-10h-10 M{PORTRAIT_X - 14},{PORTRAIT_Y + GRID_H + 4}v10h10 M{PORTRAIT_X + GRID_W + 14},{PORTRAIT_Y + GRID_H + 4}v10h-10" fill="none" stroke="{accent_cyan}" stroke-width="1.4"/>
+      <!-- Corner Crosshair Ticks with subtle breathing glow -->
+      <path d="M{PORTRAIT_X - 14},{PORTRAIT_Y - 4}v-10h10 M{PORTRAIT_X + GRID_W + 14},{PORTRAIT_Y - 4}v-10h-10 M{PORTRAIT_X - 14},{PORTRAIT_Y + GRID_H + 4}v10h10 M{PORTRAIT_X + GRID_W + 14},{PORTRAIT_Y + GRID_H + 4}v10h-10" fill="none" stroke="{accent_cyan}" stroke-width="1.6">
+        <animate attributeName="stroke-opacity" values="0.4; 1.0; 0.4" dur="2.4s" repeatCount="indefinite"/>
+      </path>
 
-      <!-- Portrait & Logo Morph Animation Container (Clipped) -->
+      <!-- Permanent Portrait & Motion Display (Clipped) -->
       <g clip-path="url(#portrait-clip)">
         <!-- Background inside frame -->
         <rect x="{PORTRAIT_X}" y="{PORTRAIT_Y}" width="{GRID_W}" height="{GRID_H}" fill="{frame_bg}"/>
 
-        {intro_layer_svg}
-        {looping_drift_svg}
-        {morph_layer_svg}
+        {portrait_layer_svg}
+        {motion_display_svg}
       </g>
 
       <!-- Bottom HUD readout -->
       {phase_label_svg}
       <text x="{PORTRAIT_X + 150}" y="534" text-anchor="middle" fill="{accent_secondary}" font-family="'JetBrains Mono', monospace" font-size="10.5" letter-spacing="0.5">
-        VECTOR MORPH // 900 OPTIMAL TRANSPORT PARTICLES
+        BIOMETRIC SYNAPSE // ACTIVE TELEMETRY STREAM
       </text>
     </g>
 
