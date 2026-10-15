@@ -39,20 +39,30 @@ def extract_subject_mask(crop_rgb):
     """
     Extracts a clean, halo-free subject mask from the cropped RGB image.
     Uses natural color differences, physical color bounds, and morphological operations.
+    Guarantees full preservation of temple, hairline, and facial contours without notches.
     """
     arr = np.array(crop_rgb, dtype=np.float32)
     r, g, b = arr[:, :, 0], arr[:, :, 1], arr[:, :, 2]
     h, w = arr.shape[:2]
     y_coords, x_coords = np.ogrid[:h, :w]
 
-    # 1. Warm tones (skin + mustard jacket): r - b > 16
-    # 2. Dark hair, eyebrows, mustache: r, g, b < 110
-    # 3. White t-shirt in inner chest collar (bounded by jacket lapels):
-    is_tshirt = (x_coords >= 110) & (x_coords <= 185) & (y_coords >= 215) & (b > 210) & (g > 200)
+    # Background wall has (b > 220, g > 218, r > 200, and cool tone r - b < 0)
+    is_bg = (b > 220) & (g > 218) & (r > 200) & ((r - b) < 0)
 
-    is_subject = ((r - b) > 16) | ((r < 110) & (g < 110) & (b < 110)) | is_tshirt
+    # Hair is dark
+    is_hair = (r < 130) & (g < 130) & (b < 130)
+    # Skin & mustard jacket are warm tones (r - b > 6, preserves temple and hairline)
+    is_warm = ((r - b) > 6)
+    # White t-shirt inside collar
+    is_tshirt = (x_coords >= 105) & (x_coords <= 190) & (y_coords >= 210) & (b > 190) & (g > 190)
 
-    # Morphological closing to bridge small gaps between hair strands and collar seams
+    is_subject = (is_hair | is_warm | is_tshirt) & (~is_bg)
+
+    # Clean couch edge outside shoulders
+    is_subject = is_subject & ~((x_coords > 245) & (r - b < 40))
+    is_subject = is_subject & ~((x_coords < 30) & (y_coords < 240) & (r - b < 30))
+
+    # Morphological closing to bridge small gaps
     mask = ndimage.binary_closing(is_subject, structure=np.ones((7, 7)))
     mask = ndimage.binary_fill_holes(mask)
 
@@ -62,11 +72,7 @@ def extract_subject_mask(crop_rgb):
         sizes = ndimage.sum(mask, labeled, range(1, num_features + 1))
         mask = (labeled == (np.argmax(sizes) + 1))
 
-    # Gentle cleanup: opening then closing then hole-filling
-    mask = ndimage.binary_opening(mask, structure=np.ones((3, 3)))
-    mask = ndimage.binary_closing(mask, structure=np.ones((5, 5)))
     mask = ndimage.binary_fill_holes(mask)
-
     return mask
 
 

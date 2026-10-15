@@ -39,14 +39,13 @@ TERM_W = 1140
 TERM_H = 570
 SPLIT_X = 455
 
-# 15 Information Rows in strict order (Status & ToolChain removed, AI/ML & Vision added)
+# 14 Information Rows in strict order (exact specification)
 ROWS = [
     ("Subject", "Rakesh Babu Gajula", None),
     ("Role", "Software Engineer", None),
     ("Origin", "Hyderabad, India", None),
     ("Education", "B.Tech CSE / GNITC", None),
-    ("Core.AI/ML", "PyTorch / RAG / Agents", None),
-    ("Core.Vision", "YOLOv8 / OpenCV / CV", None),
+    ("Core.AI/ML", "LLMs / NLP / OpenCV / Deep Learning / RAG / GenAI", None),
     ("Core.Lang", "Python / SQL / JS", None),
     ("Core.Frontend", "React / Next.js / Tailwind", None),
     ("Core.Backend", "FastAPI / Node / Express", None),
@@ -211,8 +210,8 @@ def build_system_info_rows(theme):
 
     start_x = 485
     end_x = 1110
-    start_y = 146
-    line_h = 23
+    start_y = 148
+    line_h = 24.5
 
     # Exact monospace character width for JetBrains Mono at 14px
     char_w = 8.42
@@ -303,11 +302,11 @@ def generate_svg_banner(theme="dark"):
     # C. Active Phase Label (below portrait frame)
     phase_label_svg = f"""      <!-- HUD Phase Indicator -->
       <g transform="translate({PORTRAIT_X + 150}, 498)">
-        <rect x="-120" y="-16" width="240" height="23" rx="4" fill="{accent_cyan}12" stroke="{accent_secondary}" stroke-width="0.8" opacity="0.7"/>
-        <circle cx="-100" cy="-4" r="3.5" fill="{accent_cyan}">
+        <rect x="-124" y="-16" width="248" height="23" rx="4" fill="{accent_cyan}12" stroke="{accent_secondary}" stroke-width="0.8" opacity="0.7"/>
+        <circle cx="-108" cy="-4" r="3.5" fill="{accent_cyan}">
           <animate attributeName="opacity" values="1; 0.3; 1" dur="1.5s" repeatCount="indefinite"/>
         </circle>
-        <text text-anchor="middle" x="8" y="0" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="{accent_cyan}" letter-spacing="1.5">
+        <text x="-94" y="0" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="{accent_cyan}" letter-spacing="1.2">
           VISUAL.MAP // SYNAPSE ACTIVE
         </text>
       </g>"""

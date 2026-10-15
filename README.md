@@ -60,8 +60,7 @@ I am a **Software Engineer and AI/ML Engineer** pursuing a **B.Tech in Computer 
 ## 📊 Live GitHub Telemetry & Developer Metrics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=RakeshBabuGajula&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0A161F&title_color=22D3EE&icon_color=22D3EE&text_color=E2E8F0" height="175" alt="Rakesh's GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=RakeshBabuGajula&theme=tokyonight&hide_border=true&background=0A161F&stroke=22D3EE&ring=22D3EE&fire=A78BFA&currStreakLabel=22D3EE" height="175" alt="Rakesh's GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=RakeshBabuGajula&show_icons=true&hide_rank=true&theme=tokyonight&hide_border=true&bg_color=0A161F&title_color=22D3EE&icon_color=22D3EE&text_color=E2E8F0" height="175" alt="Rakesh's GitHub Stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RakeshBabuGajula&layout=compact&theme=tokyonight&hide_border=true&bg_color=0A161F&title_color=22D3EE&text_color=E2E8F0" height="175" alt="Top Languages" />
 </p>
 
@@ -166,16 +165,9 @@ Every project below is developed, tested, and available publicly across my GitHu
   - Automatically synthesizes post-exam diagnostic performance reports with personalized remediation roadmaps using Google Gemini & OpenAI LLMs.
 - **Tech Stack**: `Python`, `OpenCV`, `Streamlit`, `Google Gemini API`, `OpenAI`, `SpeechRecognition`, `Plotly`, `Multi-Agent Architecture`.
 
-#### 🔹 [Autonomous ECOS Engine – Enterprise Compliance & Operational Synchronization](https://github.com/RakeshBabuGajula)
-- **The Problem**: Enterprise compliance teams struggle with manual review of thousands of daily multi-source logs, exposing sensitive data to privacy breaches.
-- **The Architecture**: An autonomous agentic workflow leveraging **Google Gemini** reasoning combined with **n8n** webhook orchestration to monitor, classify, and redact unstructured data streams in real time.
-- **Key Innovations**:
-  - Automated zero-shot PII interception, deterministic security masking, and multi-tenant compliance dispatching.
-  - Fault-tolerant API execution loops with exponential backoff and persistent PostgreSQL compliance audit trails.
-- **Tech Stack**: `Google Gemini`, `n8n Orchestrator`, `Python`, `PostgreSQL`, `Agentic AI Workflows`, `REST APIs`.
-
 #### 🔹 [AI Defect Analysis System – Multi-Agent Bug Triage & Root Cause Analysis](https://github.com/RakeshBabuGajula/AI-Defect-Analysis-System)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-AI--Defect--Analysis--System-181717?style=flat-square&logo=github)](https://github.com/RakeshBabuGajula/AI-Defect-Analysis-System)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/AI-Defect-Analysis-System?style=social)](https://github.com/RakeshBabuGajula/AI-Defect-Analysis-System)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/AI-Defect-Analysis-System?style=social)](https://github.com/RakeshBabuGajula/AI-Defect-Analysis-System)
 - **The Problem**: Engineering organizations spend hundreds of hours manually de-duplicating bug tickets, analyzing crash stack traces, and determining root causes across massive codebases.
 - **The Architecture**: RAG-powered multi-agent triage system trained and indexed on historical defect datasets from Apache, Eclipse, and Mozilla.
 - **Key Innovations**:
@@ -185,6 +177,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [LifeOS AI – Full-Stack Career Planning & Skill-Gap Optimization Platform](https://github.com/RakeshBabuGajula/LifeOS_AI)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/LifeOS_AI?style=social)](https://github.com/RakeshBabuGajula/LifeOS_AI)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/LifeOS_AI?style=social)](https://github.com/RakeshBabuGajula/LifeOS_AI)
 - **The Problem**: Tech professionals and graduates lack objective, data-backed visibility into market skill deficiencies, leading to misaligned career trajectories and early burnout.
 - **The Architecture**: Full-stack intelligent platform featuring an asynchronous **FastAPI** backend, **MongoDB Atlas** persistence, and a high-performance **Next.js 14** frontend.
 - **Key Innovations**:
@@ -198,6 +191,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [AI-Driven UAV Collision & Intrusion Detection System](https://github.com/RakeshBabuGajula/AI-Driven-UAV-Collision-Intrusion-Detection-System)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/AI-Driven-UAV-Collision-Intrusion-Detection-System?style=social)](https://github.com/RakeshBabuGajula/AI-Driven-UAV-Collision-Intrusion-Detection-System)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/AI-Driven-UAV-Collision-Intrusion-Detection-System?style=social)](https://github.com/RakeshBabuGajula/AI-Driven-UAV-Collision-Intrusion-Detection-System)
 - **The Problem**: Rapidly congesting commercial drone airspaces create severe risks of mid-air collisions with other UAVs, birds, and unauthorized airspace incursions.
 - **The Architecture**: Real-time edge computer vision safety pipeline combining **YOLOv8** object detection with 3D trajectory calculation algorithms.
 - **Key Innovations**:
@@ -206,7 +200,8 @@ Every project below is developed, tested, and available publicly across my GitHu
 - **Tech Stack**: `Python`, `YOLOv8`, `OpenCV`, `Streamlit`, `Spatial Geometry`, `Real-Time Telemetry`.
 
 #### 🔹 [DOST Guardian 2.0 – Railway Digital Twin & Worker Safety Platform](https://github.com/RakeshBabuGajula/Dost-2.0-Guardian)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Dost--2.0--Guardian-181717?style=flat-square&logo=github)](https://github.com/RakeshBabuGajula/Dost-2.0-Guardian)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/Dost-2.0-Guardian?style=social)](https://github.com/RakeshBabuGajula/Dost-2.0-Guardian)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/Dost-2.0-Guardian?style=social)](https://github.com/RakeshBabuGajula/Dost-2.0-Guardian)
 - **The Problem**: Trackside railway maintenance crews face deadly hazard conditions due to delayed communication and lack of synchronized train positioning.
 - **The Architecture**: AI-assisted geospatial railway digital twin pairing real-time train movement telemetry with live GPS coordinates of track workers.
 - **Key Innovations**:
@@ -219,7 +214,8 @@ Every project below is developed, tested, and available publicly across my GitHu
 ### ⚡ 3. Data Engineering, Enterprise RAG & ML Pipelines
 
 #### 🔹 [Zepto Offline RAG Support Assistant & AI Platform](https://github.com/RakeshBabuGajula/zepto-support_assistant)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-zepto--support__assistant-181717?style=flat-square&logo=github)](https://github.com/RakeshBabuGajula/zepto-support_assistant)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/zepto-support_assistant?style=social)](https://github.com/RakeshBabuGajula/zepto-support_assistant)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/zepto-support_assistant?style=social)](https://github.com/RakeshBabuGajula/zepto-support_assistant)
 - **The Problem**: Customer support teams require instant, accurate operational retrieval without exposing sensitive company policy data to external public LLM APIs.
 - **The Architecture**: Containerized enterprise offline RAG assistant built on **LangGraph** cyclical state machines and **ChromaDB** vector databases.
 - **Key Innovations**:
@@ -228,13 +224,15 @@ Every project below is developed, tested, and available publicly across my GitHu
 - **Tech Stack**: `LangGraph`, `ChromaDB`, `FastAPI`, `Docker`, `Python`, `RAG Architecture`.
 
 #### 🔹 [Zepto Data Pipeline Analytics & Normalization Engine](https://github.com/RakeshBabuGajula/zepto-data-pipeline-analytics)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-zepto--data--pipeline--analytics-181717?style=flat-square&logo=github)](https://github.com/RakeshBabuGajula/zepto-data-pipeline-analytics)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/zepto-data-pipeline-analytics?style=social)](https://github.com/RakeshBabuGajula/zepto-data-pipeline-analytics)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/zepto-data-pipeline-analytics?style=social)](https://github.com/RakeshBabuGajula/zepto-data-pipeline-analytics)
 - **The Pipeline**: Automated web extraction and ETL pipeline that extracts raw multi-category catalog data, executes schema validation, cleans dirty records, and loads into a 3NF normalized SQLite database.
 - **Analytics**: Features comprehensive SQL indexing and Pandas benchmarks delivering granular category analytics, inventory distributions, and pricing models.
 - **Tech Stack**: `Python`, `BeautifulSoup4 / Scrapy`, `SQLite`, `Pandas`, `SQL Analytics`.
 
 #### 🔹 [Titanic Analytics & Predictive ML Pipeline](https://github.com/RakeshBabuGajula/titanic-analytics-pipeline)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-titanic--analytics--pipeline-181717?style=flat-square&logo=github)](https://github.com/RakeshBabuGajula/titanic-analytics-pipeline)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/titanic-analytics-pipeline?style=social)](https://github.com/RakeshBabuGajula/titanic-analytics-pipeline)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/titanic-analytics-pipeline?style=social)](https://github.com/RakeshBabuGajula/titanic-analytics-pipeline)
 - **The Pipeline**: Industry-standard, leakage-free data science pipeline designed as an end-to-end predictive assessment.
 - **Key Innovations**:
   - Implements strict isolation between training and validation folds to eliminate target leakage.
@@ -247,6 +245,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [Abhi's SeatSure – Smart Bus Booking & Flexi-Ticket Platform](https://github.com/RakeshBabuGajula/abhi-seat-sure)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/abhi-seat-sure?style=social)](https://github.com/RakeshBabuGajula/abhi-seat-sure)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/abhi-seat-sure?style=social)](https://github.com/RakeshBabuGajula/abhi-seat-sure)
 - **The Problem**: Rigid bus ticket cancellation policies lead to high user dissatisfaction, lost revenue for operators, and empty seats on popular travel routes.
 - **The Architecture**: High-conversion booking platform introducing **Flexi Tickets** with integrated **ReBook** and **ReSell** options.
 - **Key Innovations**:
@@ -255,6 +254,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [Govinda Marg – Smart Bus Ticketing & Queue Management System](https://github.com/RakeshBabuGajula/Govinda-Marg)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/Govinda-Marg?style=social)](https://github.com/RakeshBabuGajula/Govinda-Marg)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/Govinda-Marg?style=social)](https://github.com/RakeshBabuGajula/Govinda-Marg)
 🏆 *Formally appreciated and commended by APSRTC and TTD Transport Officials*
 - **The Problem**: Tens of thousands of pilgrims traveling between Tirumala and Tirupati face chaotic physical queues, paper ticket wastage, and ticketing fraud.
 - **The Architecture**: Full-stack web ticketing system implementing paperless dynamic QR generation, role-based portals for commuters and conductors, and real-time validation.
@@ -264,6 +264,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [Utpatti Flow – MERN SDLC Project Management & Kanban Suite](https://github.com/RakeshBabuGajula/Utpatti-Flow)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/Utpatti-Flow?style=social)](https://github.com/RakeshBabuGajula/Utpatti-Flow)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/Utpatti-Flow?style=social)](https://github.com/RakeshBabuGajula/Utpatti-Flow)
 - **The Problem**: Fast-moving engineering teams struggle to maintain unified visibility across requirements, code sprints, and deployment milestones.
 - **The Architecture**: Full-stack MERN application providing end-to-end SDLC lifecycle management with dynamic drag-and-drop Kanban boards.
 - **Key Innovations**:
@@ -272,6 +273,7 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [Real-Time Voice Translator & Speech AI](https://github.com/RakeshBabuGajula/real-time-voice-translator)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/real-time-voice-translator?style=social)](https://github.com/RakeshBabuGajula/real-time-voice-translator)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/real-time-voice-translator?style=social)](https://github.com/RakeshBabuGajula/real-time-voice-translator)
 - **The Problem**: Cross-lingual verbal communication barriers in public utilities and multi-regional workspaces.
 - **The Architecture**: Real-time web engine capturing microphone audio streams, transcribing speech to text, performing contextual neural translation via Google Gemini, and synthesizing natural speech playback.
 - **Key Innovations**: Supports 50+ languages with live editable transcripts, recording controls, and audio export capabilities. Built during the Viswam.AI internship.
@@ -279,10 +281,18 @@ Every project below is developed, tested, and available publicly across my GitHu
 
 #### 🔹 [Fake News Detection Engine – Deep Learning NLP Classifier](https://github.com/RakeshBabuGajula/Fake_News_Detector)
 [![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/Fake_News_Detector?style=social)](https://github.com/RakeshBabuGajula/Fake_News_Detector)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/Fake_News_Detector?style=social)](https://github.com/RakeshBabuGajula/Fake_News_Detector)
 - **The Problem**: Rampant proliferation of misinformation across digital social media channels.
 - **The Architecture**: Deep recurrent neural network using **Bidirectional LSTM** and word embeddings trained on multi-thousand news corpora, deployed live on **Hugging Face Spaces**.
 - **Key Metrics**: Achieved **~95% validation accuracy** through rigorous text cleaning, stopword filtration, tokenization, and sequence padding. Built during the IBM SkillsBuild internship.
 - **Tech Stack**: `Python`, `TensorFlow/Keras`, `LSTM`, `NLTK`, `Streamlit`, `Hugging Face Spaces`.
+
+#### 🔹 [Interactive Developer Portfolio & Visual Showcase](https://github.com/RakeshBabuGajula/my_portfolio)
+[![GitHub Stars](https://img.shields.io/github/stars/RakeshBabuGajula/my_portfolio?style=social)](https://github.com/RakeshBabuGajula/my_portfolio)
+[![Forks](https://img.shields.io/github/forks/RakeshBabuGajula/my_portfolio?style=social)](https://github.com/RakeshBabuGajula/my_portfolio)
+- **The Problem**: Static portfolios fail to demonstrate real-time telemetry, terminal interaction, and responsive frontend UI architecture.
+- **The Architecture**: High-performance interactive portfolio engineered with responsive layouts, dynamic project filtering, dark/light theme switching, and direct social dispatch.
+- **Tech Stack**: `HTML5`, `CSS3`, `JavaScript`, `GitHub Pages`, `Responsive Design`.
 
 ---
 

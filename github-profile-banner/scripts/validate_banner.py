@@ -37,8 +37,7 @@ EXPECTED_ROWS = [
     ("Role", "Software Engineer"),
     ("Origin", "Hyderabad, India"),
     ("Education", "B.Tech CSE / GNITC"),
-    ("Core.AI/ML", "PyTorch / RAG / Agents"),
-    ("Core.Vision", "YOLOv8 / OpenCV / CV"),
+    ("Core.AI/ML", "LLMs / NLP / OpenCV / Deep Learning / RAG / GenAI"),
     ("Core.Lang", "Python / SQL / JS"),
     ("Core.Frontend", "React / Next.js / Tailwind"),
     ("Core.Backend", "FastAPI / Node / Express"),
@@ -88,7 +87,7 @@ class BannerValidator:
                 missing.append(val)
                 all_ok = False
 
-        details = "All 15 rows present with exact values" if all_ok else f"Missing: {missing}"
+        details = "All 14 rows present with exact values" if all_ok else f"Missing: {missing}"
         self.log_check(f"System Info Rows ({filename})", all_ok, details)
 
         # Check links
